@@ -1,15 +1,41 @@
-# Predictive Fitness Analytics Platform
+🏋️ Predictive Fitness Analytics Platform
 
-A full-stack application that correlates user-provided fitness data (workouts, nutrition, sleep) to predict future performance and suggest optimized fitness goals.
+A full-stack web app that tracks workouts, nutrition, and sleep, and uses an XGBoost ML model to predict performance & suggest personalized fitness goals.
 
-## 📂 Project Structure
-- Frontend: React, Chart.js, CSS3
-- Backend: Node.js, Express, MongoDB
-- ML Model: Python (XGBoost, Pandas, Scikit-learn)
+🔧 Tech Stack
 
-## 🚀 Setup Instructions
-1. Clone repo & install dependencies
-2. Start MongoDB
-3. Run backend, frontend, ML API
+Frontend: React, Chart.js, Material-UI
 
-✅ Now you can push this repo to GitHub for college verification!
+Backend: Node.js, Express, MongoDB
+
+ML Model: Python (XGBoost, Pandas, Scikit-learn, Flask)
+
+🚀 Quick Start
+
+Clone repo
+
+git clone https://github.com/Riyamy/predictive-fitness-platform.git
+cd predictive-fitness-platform
+
+
+Backend setup
+
+cd server && npm install && npm run dev
+
+
+Frontend setup
+
+cd client && npm install && npm start
+
+
+ML API setup
+
+cd ml-model && pip install -r requirements.txt && python predict.py
+
+📊 Features
+
+Log fitness activities (workout, sleep, nutrition, calories).
+
+Interactive dashboard with charts & insights.
+
+Predict performance using trained ML model.
