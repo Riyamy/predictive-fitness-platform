@@ -1,0 +1,12 @@
+node_modules/
+client/node_modules/
+server/node_modules/
+ml-model/__pycache__/
+*.pyc
+.env
+.env.local
+dist/
+build/
+*.pkl
+.vscode/
+.DS_Store

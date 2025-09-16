@@ -1,0 +1,35 @@
+version: '3.8'
+services:
+  mongo:
+    image: mongo:6
+    restart: unless-stopped
+    volumes:
+      - mongo-data:/data/db
+    ports:
+      - "27017:27017"
+
+  ml:
+    build: ./ml-model
+    volumes:
+      - ./ml-model:/app
+    ports:
+      - "5001:5001"
+
+  server:
+    build: ./server
+    env_file: .env
+    ports:
+      - "5000:5000"
+    depends_on:
+      - mongo
+      - ml
+
+  client:
+    build: ./client
+    ports:
+      - "3000:80"
+    depends_on:
+      - server
+
+volumes:
+  mongo-data:
